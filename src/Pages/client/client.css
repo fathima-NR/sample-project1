@@ -1,0 +1,62 @@
+
+.client-image img {
+    opacity: .9;
+    width: 100%; /* Make the image responsive and cover the container width */
+   height: 500px; /* Maintain aspect ratio */
+    display: block; /* Remove extra spacing below the image */
+    margin: 0 auto; /* Center the image horizontally */
+    width: 100%;
+
+  }
+  
+/* Caption overlay styling */
+.client-caption {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: white;
+    font-size: 6vw; /* Adjust as needed */
+   
+    text-align: center;
+   opacity: .6;
+    z-index: 1; /* Ensure it stays above the image */
+  }
+  
+  /* Media query for devices with a max-width of 1200px (desktops) */
+@media (max-width: 1200px) {
+    .client-image img {
+      height: 400px; /* Adjust height for medium screens */
+    }
+  }
+  
+  /* Media query for devices with a max-width of 768px (tablets) */
+  @media (max-width: 768px) {
+    .client-image img {
+      height: 300px; /* Adjust height for smaller screens */
+    }
+  }
+  
+  /* Media query for devices with a max-width of 576px (large phones) */
+  @media (max-width: 576px) {
+    .client-image img {
+      height: 250px; /* Adjust height for phones */
+      
+    }
+    .client-caption{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+  }
+  
+  /* Media query for devices with a max-width of 375px (small phones) */
+  @media (max-width: 375px) {
+    .client-image img {
+      height: 200px; /* Adjust height for very small screens */
+
+    }
+  }

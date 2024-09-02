@@ -1,0 +1,146 @@
+.blog-image img {
+  opacity: .9;
+  width: 100%;
+  height: 400px;
+  display: block;
+  margin: 0 auto;
+}
+
+.blog-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 6vw;
+  font-weight: bold;
+  text-align: center;
+  opacity: .8;
+  z-index: 1;
+}
+
+/* Card styling */
+.card1 {
+  margin: 15px; /* Default margin for desktop */
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease;
+  width: 350px;
+  height: auto;
+}
+
+.card:hover {
+  border-color: white;
+}
+
+.card-img-top {
+  height: 300px;
+  padding: 23px;
+  object-fit: cover;
+  border-radius: 5px;
+  background-color: #1c1c1c;
+}
+
+.card-body {
+  height: 220px;
+}
+
+.btn1 {
+  background-color: #cd9a61;
+  margin-top: 10px;
+}
+
+.btn1:hover {
+  background-color: #dcb88d;
+  color: black;
+}
+
+/* Media query for devices with a max-width of 1200px (desktops) */
+@media (max-width: 1200px) {
+  .blog-image img {
+      height: 350px;
+  }
+  .card1 {
+      width: 300px;
+      margin: 15px 10px; /* Adjust margin for desktop */
+  }
+  .card-img-top {
+      height: 250px;
+  }
+  .card-body {
+      height: 200px;
+  }
+  .btn1 {
+      font-size: 14px;
+      padding: 8px 12px;
+  }
+}
+
+/* Media query for devices with a max-width of 768px (tablets) */
+@media (max-width: 768px) {
+  .blog-image img {
+      height: 300px;
+  }
+  .card1 {
+      width: 240px;
+      margin: 15px auto; /* Center the card */
+  }
+  .card-img-top {
+      height: 200px;
+  }
+  .card-body {
+      height: auto;
+  }
+  .btn1 {
+      font-size: 12px;
+      padding: 6px 10px;
+  }
+  .blog-caption {
+      font-size: 7vw;
+  }
+}
+
+/* Media query for devices with a max-width of 576px (large phones) */
+@media (max-width: 576px) {
+  .blog-image img {
+      height: 250px;
+  }
+  .card1 {
+      width: 300px;
+      margin: 15px auto; /* Center the card */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .card-img-top {
+      height: 250px;
+  }
+  .card-body {
+      height: 200px;
+  }
+  .btn1 {
+      font-size: 14px;
+      padding: 8px 12px;
+  }
+}
+
+/* Media query for devices with a max-width of 375px (small phones) */
+@media (max-width: 375px) {
+  .blog-image img {
+      height: 200px;
+  }
+  .card1 {
+      width: 300px;
+      margin: 15px auto; /* Center the card */
+   
+  }
+  .card-img-top {
+      height: 250px;
+  }
+  .card-body {
+      height: 200px;
+  }
+  .btn1 {
+      font-size: 14px;
+      padding: 8px 12px;
+  }
+}

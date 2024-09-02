@@ -1,0 +1,59 @@
+
+  
+/* Default styling for the video */
+.video {
+  display: block;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* Media Query for Tablets and Small Screens */
+@media (max-width: 768px) {
+  .video {
+    height: 400px; /* Adjust height for smaller screens */
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 576px) {
+  .video {
+    height: 300px; /* Further reduce height for very small screens */
+  }
+}
+
+  .subheading {
+    display: flex;
+   
+    justify-content: space-evenly; /* Adjust spacing as needed */
+    cursor: pointer; /* Indicate that headings are clickable */
+  }
+  
+  .subheading h5 {
+    margin: 0; 
+    /* Remove default margin */
+    padding: 5px; /* Add padding for better spacing */
+    border-bottom: 2px solid white;
+  
+  }
+  .subheading h5:hover{
+    border-bottom: 2px solid  #cd9a61;
+    color:  #cd9a61;
+  }
+  .content {
+    margin-top: 20px;
+    padding: 30px;
+    line-height: 30px;
+    letter-spacing: 2px;
+  }
+  /* Animation for heading section */
+.heading-section {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.heading-section.animate {
+    opacity: 1;
+    transform: translateX(0);
+}

@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contact-image img {
+    opacity: .5;
+    width: 100%; /* Make the image responsive and cover the container width */
+   height: 400px; /* Maintain aspect ratio */
+    display: block; /* Remove extra spacing below the image */
+    margin: 0 auto; /* Center the image horizontally */
+    width: 100%;
+ 
+  
+
+  }
+  
+/* Caption overlay styling */
+.contact-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 6vw; /* Adjust as needed */
+    font-weight: bold;
+    text-align: center;
+    opacity: .7;
+    z-index: 1; /* Ensure it stays above the image */
+  }
+.social-icons1 {
+    display: flex;
+    margin-left: 10px;
+    gap: 10px;
+  }
+  
+  .social-icon1 {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    padding: 10px;
+    border: 1px solid rgb(114, 110, 110);
+    border-radius: 20px;
+  }
+  .social-icon1:hover{
+    background-color: rgb(146, 142, 142);
+  
+  }
+  /* Media query for devices with a max-width of 1200px (desktops) */
+@media (max-width: 1200px) {
+    .contact-image img {
+      height: 400px; /* Adjust height for medium screens */
+    }
+  }
+  
+  /* Media query for devices with a max-width of 768px (tablets) */
+  @media (max-width: 768px) {
+    .contact-image img {
+      height: 300px; /* Adjust height for smaller screens */
+    }
+  }
+  
+  /* Media query for devices with a max-width of 576px (large phones) */
+  @media (max-width: 576px) {
+    .contact-image img {
+      height: 300px; /* Adjust height for phones */
+      
+    }
+    .contact-caption{
+        position: absolute;
+        top: 63%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+  }
+  
+  /* Media query for devices with a max-width of 375px (small phones) */
+  @media (max-width: 375px) {
+    .contact-image img {
+      height: 200px; /* Adjust height for very small screens */
+
+    }
+  }

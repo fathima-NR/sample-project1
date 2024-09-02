@@ -1,0 +1,70 @@
+/* Base styles for headings */
+h4, h1, h5 {
+    text-align: center;
+    margin: 0;
+  }
+  
+  /* Styling for h4, h1, and h5 headings */
+  h4 {
+    color: #cd9a61;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  h1 {
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  h5 {
+    color: white;
+    font-size: 1em;
+    margin-bottom: 30px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1200px) {
+    h4 {
+      font-size: 1.1em;
+    }
+    
+    h1 {
+      font-size: 2.2em;
+    }
+    
+    h5 {
+      font-size: 0.9em;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    h4 {
+      font-size: 1em;
+    }
+    
+    h1 {
+      font-size: 1em;
+    }
+    
+    h5 {
+      font-size: 0.8em;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    h4 {
+      font-size: 0.9em;
+      margin-bottom: 8px;
+    }
+    
+    h1 {
+      font-size: 18px;
+    }
+    
+    h5 {
+      font-size: 0.7em;
+      margin-bottom: 20px;
+    }
+  }
+  

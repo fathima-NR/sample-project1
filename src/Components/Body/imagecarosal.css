@@ -1,0 +1,234 @@
+/* Image Carousel CSS */
+.carosalimg {
+    height: 550px;
+  }
+  
+  .carousel-item {
+    position: relative;
+    transition: 0.7s ease-in-out; /* Smooth fade transition */
+  }
+  
+  .carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent overlay */
+    z-index: 1;
+  }
+  
+  .carousel-caption {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-30%, -50%);
+    text-align: center;
+  }
+  
+  /* Animate the heading (h1) */
+  .carousel-caption h1 {
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 10px; /* Ensure no extra space between letters */
+    text-shadow: 2px 2px 2px black;
+    font-size: 60px;
+    margin-bottom: 40px;
+    color: #fff; /* Adjust color as needed */
+    display: inline-block;
+    overflow: hidden; /* Hide overflow to allow animation effect */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  
+  /* Animate each letter */
+  .carousel-caption h1 span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-100px); /* Start above */
+    animation: fadeInFromTop 1.5s ease-in-out forwards;
+    animation-delay: var(--delay); /* Delay for each letter */
+  }
+  
+  /* Keyframes for fadeInFromTop */
+  @keyframes fadeInFromTop {
+    0% {
+      transform: translateY(-800px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Preserve spaces without additional margins */
+  .carousel-caption h1 span {
+    margin-right: 0; /* Ensure no extra margin between letters */
+  }
+  
+  /* Animate the paragraph (p) */
+  .carousel-caption p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-shadow: 2px 2px 2px black;
+    margin-left: 30px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-in-out forwards;
+    animation-delay: 1s; /* Starts after the heading */
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Animate the button (.captionbtn) */
+  .captionbtn {
+
+    padding-inline: 30px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    color: white;
+    font-weight: 600;
+    border: 0;
+    font-family: "Oswald", sans-serif;
+    background-color: #cd9a61;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-in-out forwards;
+    animation-delay: 2s; /* Starts after the paragraph */
+  }
+/* Media Queries for Carousel Elements */
+
+/* Extra Small Devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .carousel-caption { 
+        z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-30%, -50%);
+    text-align: center;
+    }
+    
+    .carousel-caption h1 {
+      font-size: 24px;
+      letter-spacing: 5px;
+      margin-bottom: 20px;
+    }
+    
+    .carousel-caption p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    
+    .carousel-caption .captionbtn {
+      padding: 8px 20px;
+      font-size: 14px;
+    }
+    
+    .carosalimg {
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+  
+  /* Small Devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .carousel-caption h1 {
+      font-size: 30px;
+      letter-spacing: 7px;
+    }
+    
+    .carousel-caption p {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+    
+    .carousel-caption .captionbtn {
+      padding: 10px 25px;
+      font-size: 16px;
+    }
+    
+    .carosalimg {
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+  
+  /* Medium Devices (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .carousel-caption h1 {
+      font-size: 36px;
+      letter-spacing: 8px;
+    }
+    
+    .carousel-caption p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    
+    .carousel-caption .captionbtn {
+      padding: 12px 30px;
+      font-size: 18px;
+    }
+    
+    .carosalimg {
+      height: 450px;
+      object-fit: cover;
+    }
+  }
+  
+  /* Large Devices (desktops, 992px and up) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .carousel-caption h1 {
+      font-size: 48px;
+      letter-spacing: 9px;
+    }
+    
+    .carousel-caption p {
+      font-size: 20px;
+      margin-bottom: 35px;
+    }
+    
+    .carousel-caption .captionbtn {
+      padding: 14px 35px;
+      font-size: 20px;
+    }
+    
+    .carosalimg {
+      height: 500px;
+      object-fit: cover;
+    }
+  }
+  
+  /* Extra Large Devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    .carousel-caption h1 {
+      font-size: 60px;
+      letter-spacing: 10px;
+    }
+    
+    .carousel-caption p {
+      font-size: 22px;
+      margin-bottom: 40px;
+    }
+    
+    .carousel-caption .captionbtn {
+      padding: 10px 30px;
+      font-size: 22px;
+    }
+    
+    .carosalimg {
+      height: 550px;
+      object-fit: cover;
+    }
+  }
+  

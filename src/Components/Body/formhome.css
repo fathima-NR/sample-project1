@@ -1,0 +1,94 @@
+/* Container for the entire form with background image */
+.form-container {
+    position: relative;
+    text-align: center;
+    overflow: hidden; /* Ensure background is properly contained */
+  }
+  
+  /* Background image wrapper with opacity */
+  .background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('src/assets/Restaurant00.webp');
+    background-size: cover;
+    background-position: center;
+  
+    opacity: 0.6; /* Adjust opacity here */
+    z-index: 0; /* Ensure it stays behind other content */
+  }
+  .msg{
+    width: 100%;
+    height: 150px;
+    margin-bottom: 50px;
+  }
+  /* Overlay to ensure form is clearly visible */
+  .overlay {
+    position: relative;
+    z-index: 1;
+    padding-inline: 60px;
+    padding-block: 30px;
+    background: rgba(0, 0, 0, 0.5); /* Optional: dark background for form area */
+  }
+  
+  /* Form styling */
+  .custom-form {
+    position: relative;
+    margin-top: 50px;
+    z-index: 1; /* Ensure form elements are above the overlay */
+  }
+  
+  .form-group {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .form-control {
+    background-color: transparent; /* Fully transparent input fields */
+    border: 1px solid white; /* White border */
+    color: white; /* White text color */
+    border-radius: 0; /* No border radius */
+    font-weight: 500;
+    padding-right: 40px; /* Space for the icon */
+  
+  }
+  
+  .form-control:focus {
+    border-color: #cd9a61; /* Yellow border on focus */
+    box-shadow: none; /* Remove the default focus shadow */
+    color: white;
+    background-color: transparent; /* Ensure background remains transparent */
+  }
+  
+  .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Placeholder color for visibility */
+  }
+  
+  /* Style for icons */
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px; /* Adjust positioning as needed */
+    transform: translateY(-50%);
+    color: white; /* Icon color */
+    pointer-events: none; /* Ensure the icon doesn't interfere with input */
+  }
+  
+  /* Button styling */
+  .btn-block {
+    width: 100%;
+    background-color: #cd9a61;
+    color: white; /* Button text color */
+    padding: 10px;
+    border-radius: 0; /* No border radius */
+    position: relative;
+    z-index: 1;
+  }
+  
+  .btn-block:hover {
+    background-color: #ecba7f;
+    color: white; /* Slightly visible background on hover */
+  }
+  

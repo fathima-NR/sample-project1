@@ -1,0 +1,252 @@
+/* Base styles for the navbar */
+.navbar {
+  background-color: black;
+}
+.navbar-container {
+  transition: top .3s ease-in-out; /* Smooth transition for the top property */
+}
+
+.navbar-container.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure the navbar is on top of other content */
+}
+
+
+/* Adjustments to content to prevent overlap with the fixed navbar */
+
+.navbar-toggler {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 30px;
+  display: block; /* Ensure it is always visible */
+}
+
+.navbar-toggler:hover {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: none; /* Ensure this is set if you're using a custom icon */
+}
+
+/* Styling for navigation links */
+.nav-link {
+  color: white; /* Default color */
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none; /* Remove underline if any */
+}
+
+/* Hover state styling */
+.nav-link:hover {
+  color: aqua; /* Consistent hover color */
+}
+/* Dropdown menu styling */
+.navbar-nav .dropdown-menu {
+  background-color: black; /* Black background */
+  border-radius: 0; /* No border radius */
+  border: none; /* No border */
+  width: 300px;
+  height: auto;
+}
+
+.navbar-nav .dropdown-item {
+  color: white; /* White text color */
+  padding: 15px 30px; /* Add some padding */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  position: relative; /* Set relative position to use ::after */
+}
+
+.navbar-nav .dropdown-item::after {
+  content: '';
+  position: absolute;
+  left: 0; /* Position the line at the left side */
+  top: 50%; /* Position the line vertically in the middle */
+  transform: translateY(-50%) scaleX(0); /* Center it vertically and set initial scale */
+  width: 20px; /* Length of the line */
+  height: 2px; /* Thickness of the line */
+  background-color: white; /* White color line */
+  transition: transform 0.3s ease; /* Smooth transition for the line's movement */
+}
+
+.navbar-nav .dropdown-item:hover {
+  color: white; /* Keep text white on hover */
+  padding-left: 50px; /* Move text to the right on hover */
+  background-color: black; /* Keep background black on hover */
+}
+
+.navbar-nav .dropdown-item:hover::after {
+  transform: translateY(-50%) scaleX(1); /* Expand the line on hover */
+}
+.nav-link1 {
+  color: white; /* Default color */
+  font-size: 25px;
+  text-decoration: none; /* Remove underline if any */
+}
+
+/* Hover state styling */
+.nav-link1:hover {
+  color: aqua; /* Consistent hover color */
+}
+
+/* Dropdown Menu Styles */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block; /* Show the dropdown menu on hover */
+}
+
+.dropdown-menu {
+  display: none; /* Hide the dropdown menu by default */
+  position: absolute;
+  background-color: white; /* Set the background color for the dropdown */
+}
+
+.dropdown-item {
+  color: black; /* Default color */
+  font-weight: 400;
+}
+
+.dropdown-item:hover {
+  color: aqua; /* Hover color for dropdown items */
+  background-color: black; /* Ensure consistent background color */
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.phone-number {
+  margin-left: 30px;
+}
+
+.social-icons {
+  display: flex;
+  margin-left: 100px;
+  gap: 10px;
+}
+
+.social-icon {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  padding: 7px;
+  border: 1px solid rgb(114, 110, 110);
+}
+
+.social-icon:hover {
+  background-color: rgb(146, 142, 142);
+}
+
+.navbar-header {
+  width: 100%;
+}
+
+.icon1 {
+  margin: 10px;
+}
+
+/* Media queries for responsive design */
+
+/* Ensure the toggle button is always visible */
+.navbar-toggler {
+  display: block;
+}
+
+/* Media query for screens 1200px and below */
+@media (max-width: 1200px) {
+  .contact-info {
+    display: none; 
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column; /* Stack navbar items vertically */
+    width: 100%;
+    align-items: flex-start; /* Align items to the start */
+    margin-top: 30px;
+  }
+
+  .nav-item {
+    padding: 10px;
+    width: 100%;
+ }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .nav-link1 {
+    font-size: 20px;
+    border-bottom: none;
+  }
+
+  
+
+  .navbar-toggler {
+    margin-top: 10px;
+  }
+
+  .navbar-brand img {
+    width: 250px;
+  }
+}
+
+/* Media query for screens 992px and below */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    transition: transform 0.2s ease-in-out;
+    transform: translateX(-100%);
+  }
+
+  .nav-item {
+    padding: 3px;
+    width: 100%;
+    border-bottom: 1px solid white;
+  }
+  .navbar-collapse.show {
+    transform: translateX(0);
+  }
+}
+
+.navbar-container {
+  position: relative;
+}
+
+.search-icon {
+  position: relative; /* Ensure the search icon is positioned relative */
+}
+
+.search-container {
+  position: absolute;
+  top: 100%; /* Position it right below the search icon */
+  right: 50px; /* Align to the right of the search icon */
+  background: #fff;
+  padding: 5px;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.search-input {
+  width: 300px; /* Set a smaller width */
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}

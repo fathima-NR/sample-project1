@@ -1,0 +1,52 @@
+.image-slide-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+  
+  .image-slide {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: slide 20s linear infinite;
+  }
+  
+  .image-item {
+    flex: 0 0 auto;
+    width: 300px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    margin-right: 13px; /* Space between images */
+    position: relative;
+    overflow: hidden;
+    transition: transform .7s ease;
+  }
+  
+  .image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease; 
+  }
+  
+  .caption {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    left: 100px; /* Adjust as needed */
+
+    color: #fff; /* Text color */
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 14px; /* Adjust font size as needed */
+  }
+  .image-item:hover img {
+    transform: scale(1.1); /* Zoom in effect */
+  }
+  
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-110%);
+    }
+  }
+  
